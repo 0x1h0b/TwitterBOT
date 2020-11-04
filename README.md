@@ -19,7 +19,7 @@ A simple bot that tells who unfollowed you on twitter !
  
  Download the  project. 
  ```
-    git clone https://github.com/hb10001/TwitterBot.git
+    git clone https://github.com/0x1h0b/TwitterBot.git
  ```
  or simply download the zip file .
  
