@@ -3,7 +3,10 @@ import pickle
 import sys
 from keys import *
 
-username = '0xgh0st_'
+# below username and id is my twitter account , change it to the user you want to send message.
+
+username = '0x1h0b'
+my_userId = '3335776572'
 
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -28,7 +31,7 @@ def main():
                     msg = ' {0} with username : @{1} unfollowed you !'.format(api.get_user(i).name,api.get_user(i).screen_name)
                 except Exception as e:
                     msg = ' Error for User ID: {} '.format(i)+str(e)
-                dm = api.send_direct_message('3335776572', msg)
+                dm = api.send_direct_message(my_userId, msg)
                 print( '** Check your Inbox **\n')
         else:
             print('\n ALL GOOD ! \n')
@@ -49,7 +52,7 @@ def main():
             sys.exit()
     except Exception as e:
         msg = str(e)
-        m = api.send_direct_message('3335776572', msg)
+        m = api.send_direct_message(my_userId, msg)
         print( '** Check your Inbox **')
         print('\n')
         sys.exit()
